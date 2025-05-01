@@ -15,3 +15,7 @@
   --color-accent-content: #D72050;
 
 }
+
+a.active{
+  @apply bg-base-300
+}

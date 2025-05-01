@@ -1,10 +1,14 @@
 import React from 'react';
 import SocialLogin from './SocialLogin';
+import FindUsOn from './FindUsOn';
+import QZone from './QZone';
 
 const RightAside = () => {
   return (
-    <div>
+    <div className='space-y-10'>
       <SocialLogin></SocialLogin>
+      <FindUsOn></FindUsOn>
+      <QZone></QZone>
     </div>
   );
 };

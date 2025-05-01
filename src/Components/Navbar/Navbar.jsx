@@ -6,7 +6,7 @@ const Navbar = () => {
   return (
     <div className='flex justify-between items-center'>
       <section className="left"></section>
-      <section className="midlle flex items-center gap-5 text-accent ">
+      <section className="midlle flex items-center gap-5 text-accent ml-45 ">
         <NavLink to="/home">Home</NavLink>
         <NavLink to="/about">About</NavLink>
         <NavLink to="/career">Career</NavLink>

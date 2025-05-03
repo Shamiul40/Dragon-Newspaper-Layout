@@ -48,6 +48,7 @@ const router = createBrowserRouter([
       </PrivateRoute>
     ),
     loader: () => fetch("/news.json"),
+    hydrateFallbackElement: <p className="text-center">Loading...</p>,
   },
   {
     path: "/*",

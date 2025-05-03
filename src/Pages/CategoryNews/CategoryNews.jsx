@@ -26,7 +26,7 @@ const CategoryNews = () => {
     
   }, [data, id]);
 
-  console.log(categoryNews)
+  // console.log(categoryNews)
  
   return (
     <div>

@@ -8,7 +8,7 @@ const NewsDetails = () => {
   const { id } = useParams();
 
   const singleNewsDetails = data.find((news) => news.id === id);
-  console.log(singleNewsDetails);
+  // console.log(singleNewsDetails);
 
   const{image_url,title,details,category_id} = singleNewsDetails
 

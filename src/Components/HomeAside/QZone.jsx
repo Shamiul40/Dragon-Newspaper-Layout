@@ -12,7 +12,7 @@ const QZone = () => {
         <img src={swimming} alt="" />
         <img src={classImg} alt="" />
         <img src={playground} alt="" />
-        <img src={Bg} alt="" />
+        <img className='rounded-lg' src={Bg} alt="" />
       </div>
     </div>
   );

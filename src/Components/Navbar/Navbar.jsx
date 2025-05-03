@@ -23,7 +23,7 @@ const Navbar = () => {
         <div>{user && user.email}</div>
       </section>
       <section className="midlle flex items-center gap-5 text-accent ml-45 ">
-        <NavLink to="/home">Home</NavLink>
+        <NavLink to="/">Home</NavLink>
         <NavLink to="/about">About</NavLink>
         <NavLink to="/career">Career</NavLink>
       </section>

@@ -1,24 +1,30 @@
-import React, { use } from "react";
-import { Link, NavLink } from "react-router";
+import React, { use, useState } from "react";
+import { Link, NavLink, useLocation, useNavigate } from "react-router";
 import { AuthContext } from "../../Components/Provider/AuthProvider";
 
 const Login = () => {
   const { signIn } = use(AuthContext);
+  const location = useLocation();
+  const navigate = useNavigate();
+  const [errorMessage, setErrorMessage] = useState("");
+  console.log(location);
 
   const handleLogin = (e) => {
     e.preventDefault();
     const target = e.target;
     const email = target.email.value;
     const password = target.email.value;
-    
 
     signIn(email, password)
       .then((result) => {
         const user = result.user;
         console.log(user);
+        navigate(`${location.state ? location.state : "/"}`);
       })
       .then((error) => {
-        console.log("error message", error);
+        const errorCode = error.code
+        
+        setErrorMessage(errorCode);
       });
   };
 
@@ -33,6 +39,7 @@ const Login = () => {
               name="email"
               className="input"
               placeholder="Email"
+              required
             />
             <label className="label">Password</label>
             <input
@@ -40,11 +47,13 @@ const Login = () => {
               name="password"
               className="input"
               placeholder="Password"
+              required
             />
             <div>
               <a className="link link-hover">Forgot password?</a>
             </div>
-            <button type="submit" className="btn btn-neutral mt-4" >
+            {errorMessage && <p> {errorMessage}</p>}
+            <button type="submit" className="btn btn-neutral mt-4">
               <Link to="/">Login</Link>
             </button>
             <p className="font-semibold text-center my-2 text-sm">

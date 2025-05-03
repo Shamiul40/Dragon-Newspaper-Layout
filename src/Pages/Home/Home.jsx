@@ -5,6 +5,7 @@ const Home = () => {
   return (
     <div>
       <Navigate to="/category/0"></Navigate>
+     
     </div>
   );
 };
